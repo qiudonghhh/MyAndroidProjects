@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/launcher_bg"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    //版本号控件
+    <!--android:shadowRadius="2"阴影范围属性-->
+    <!-- android:shadowDx="1"
+        android:shadowDy="1" 阴影方向-->
+    <TextView
+        android:id="@+id/tv_version_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowColor="#FF00"
+        android:shadowRadius="1"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_version_name" />/>
+
+</android.support.constraint.ConstraintLayout>
