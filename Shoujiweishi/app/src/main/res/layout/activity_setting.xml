@@ -50,6 +50,38 @@
         android:layout_height="2dp"
         android:background="#000"
         android:layout_below="@id/tv_des"/>
+        <TextView
+            android:id="@+id/tv_blacknumber1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:text="黑名单拦截设置"
+            android:textColor="#808080"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_blacknumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_blacknumber1"
+            android:text="黑名单拦截已关闭"
+            android:textSize="30sp" />
+
+        <CheckBox
+            android:id="@+id/cb_blacknumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp" />
+
+        <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000"
+        android:layout_below="@id/tv_blacknumber"/>
 
     </RelativeLayout>
 

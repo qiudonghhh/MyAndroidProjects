@@ -111,4 +111,26 @@ public class BlackNumberDao {
         cursor.close();
         return result;
     }
+
+    /**
+     * @param phone  作为查询条件的电话号码
+     * @return  返回改号码的拦截模式
+     */
+    public String getMode(String phone){
+        String mode=null;
+        //开启数据库，
+        SQLiteDatabase db=blackNumberOpenHelper.getWritableDatabase();
+        //根据电话号码查询拦截模式（表名，要查询的mode，条件是根据电话号码）
+        Cursor cursor=db.query("blacknumber",new String[]{"mode"},"phone=?",new String[]{phone},null,null,null);
+        //如果游标能往下移动
+        if (cursor.moveToNext()){
+            //遍历Cursor对象，获取到索引为0的
+            mode=cursor.getString(0);
+        }
+        /*
+        一定要关闭游标，回收游标对象
+        */
+        cursor.close();
+        return mode;
+    }
 }

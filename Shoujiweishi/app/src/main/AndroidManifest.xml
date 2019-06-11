@@ -27,6 +27,7 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".SettingCentreActivity" />
         <activity android:name=".BlackNumberActivity" />
+        <activity android:name=".AppMangerActivity" />
     </application>
 
 </manifest>

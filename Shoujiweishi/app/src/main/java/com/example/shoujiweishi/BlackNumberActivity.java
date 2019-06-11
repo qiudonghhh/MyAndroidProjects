@@ -30,8 +30,8 @@ public class BlackNumberActivity extends Activity {
 
     private Button bt_add;
     private ListView lv_blacknumber;
-    private EditText et_phone;
     private MyAdaper myAdaper;
+    private EditText et_phone;
     private BlackNumberDao mDao;
     private String mode="短信";
     @SuppressLint("HandlerLeak")

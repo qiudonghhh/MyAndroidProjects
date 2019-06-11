@@ -63,10 +63,15 @@ public class HomeActivity extends Activity implements View.OnClickListener {
                     case 0:
                         //弹出弹框
                        showDialog();
+                       break;
+                    case 1:
+                         Intent intent1=new Intent(HomeActivity.this, AppMangerActivity.class);
+                         startActivity(intent1);
+
                         break;
                     case 3:
-                        Intent intent=new Intent(HomeActivity.this, SettingCentreActivity.class);
-                        startActivity(intent);
+                        Intent intent2=new Intent(HomeActivity.this, SettingCentreActivity.class);
+                        startActivity(intent2);
                         break;
                 }
             }

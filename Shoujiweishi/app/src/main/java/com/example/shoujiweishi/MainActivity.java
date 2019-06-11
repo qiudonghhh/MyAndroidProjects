@@ -18,6 +18,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
+
+import com.example.service.BlackNumberService;
 import com.example.utils.StreamUtil;
 import com.example.utils.ToastUtil;
 import com.lidroid.xutils.HttpUtils;
@@ -34,16 +36,10 @@ import java.net.URL;
  *
  */
 public class MainActivity extends AppCompatActivity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-        //初始化控件
-        initUI();
-        initData();
-    }
-     /**
+
+
+    /**
      * 更新新版本的状态码
      */
     protected static final int UPDATE_VERSION=100;
@@ -69,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
                 case UPDATE_VERSION:
                     //弹出对话框提示更新
                     showUpdateDialog();
-
                     break;
                 case ENTER_HOME:
                     //进入主程序,activity跳转
@@ -86,7 +81,30 @@ public class MainActivity extends AppCompatActivity {
         };
     };
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
+        //初始化控件
+        initUI();
+        initData();
+        initservice();
+    }
+
+    private void initservice() {
+        //获取sd卡config文件
+        SharedPreferences sp=getSharedPreferences("config",MODE_PRIVATE);
+       if(sp.getBoolean("autoblacknumber",true)){
+           // 启动服务
+            Intent startintent=new Intent(this, BlackNumberService.class);
+            startService(startintent);
+    }else {
+           //关闭服务
+           Intent stopintent=new Intent(this, BlackNumberService.class);
+           stopService(stopintent);
+       }
+    }
 
 
     /**
