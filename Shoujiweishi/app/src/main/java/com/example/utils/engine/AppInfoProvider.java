@@ -31,6 +31,7 @@ public class AppInfoProvider {
                     //5.获取应用名称
                     //获取一个应用程序的所有信息
                     ApplicationInfo applicationInfo=packageInfo.applicationInfo;
+                    //获取名称
                     appInfo.name=applicationInfo.loadLabel(pm).toString();
                     //6.获取图标
                     appInfo.icon=applicationInfo.loadIcon(pm);

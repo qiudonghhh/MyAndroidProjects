@@ -12,21 +12,13 @@ import android.os.StatFs;
 import android.text.format.Formatter;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.example.utils.ToastUtil;
 import com.example.utils.engine.AppInfo;
 import com.example.utils.engine.AppInfoProvider;
-
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -105,7 +97,7 @@ public class AppMangerActivity extends Activity {
 
         //初始化控件
         TextView tv_memory=findViewById(R.id.tv_memory);
-        tv_memory.setText("内存可用："+memoryAvailSpace);
+        tv_memory.setText("存储空间："+memoryAvailSpace);
     }
 
 
@@ -130,7 +122,7 @@ public class AppMangerActivity extends Activity {
     /**
      * ListView数据适配器
      */
-    class MyAdapter extends BaseAdapter {
+     class MyAdapter extends BaseAdapter {
 
         @Override
         //1.ListView的长度，即两个集合长度和
@@ -200,22 +192,6 @@ public class AppMangerActivity extends Activity {
                 tv_path.setText("系统应用");
                 result=view;
             }
-            //监听卸载按钮
-           /* bt_uninstall.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //AppInfo appInfo=new AppInfo();
-                    //跳转到系统卸载界面
-                    *//*Intent intent=new Intent("android.intent.action.DELETE");
-                    intent.addCategory("android.intent.category.DEFAULT");
-                    intent.setData(Uri.parse("package:"+appInfo.packageName));
-                    startActivity(intent);*//*
-                    Uri uri=Uri.parse("package:getItem(position).packageName");
-                    Intent intent = new Intent(Intent.ACTION_DELETE,uri);
-                    startActivity(intent);
-                    ToastUtil.show(getApplication(),"ddd",0);
-                }
-            });*/
             return result;
         }
     }
