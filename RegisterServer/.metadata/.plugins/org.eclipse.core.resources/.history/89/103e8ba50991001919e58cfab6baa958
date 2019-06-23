@@ -1,0 +1,5 @@
+package com.jmd.db;
+
+public class DBUtils {
+
+}

@@ -1,0 +1,5 @@
+package com.jmd.domain;
+
+public class BaseBean {
+
+}
