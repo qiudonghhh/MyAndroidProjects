@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlsn:android="http://schemas.android.com/apk/res/android" xmlns:xmlsn="http://schemas.android.com/aapt" xmlns:android="http://schemas.android.com/apk/res/android">
-    <!--选中 深色的图片-->
-    <item android:state_pressed="true" android:drawable="@drawable/clean_icon_pressed"></item>
-    <item android:drawable="@drawable/clean_icon"></item>
-</selector>

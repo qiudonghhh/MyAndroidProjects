@@ -1,3 +1,0 @@
-defaultPHPServer=Default PHP Web Server
-eclipse.preferences.version=1
-phpServers=<server><hostname>localhost</hostname><debuggerId>org.eclipse.php.debug.core.noneDebugger</debuggerId><document_root></document_root><name>Default PHP Web Server</name><base_url>http\://localhost</base_url><id>php-server-33c97ff1-59b4-4ae3-a8e5-12ae0905c9ae</id></server>

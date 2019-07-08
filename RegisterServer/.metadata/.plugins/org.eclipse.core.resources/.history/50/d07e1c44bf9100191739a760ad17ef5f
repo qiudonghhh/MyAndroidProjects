@@ -1,7 +1,0 @@
-package com.jmd.servlet;
-
-import javax.servlet.http.HttpServlet;
-
-public class Loginservlet extends HttpServlet {
-	
-}
